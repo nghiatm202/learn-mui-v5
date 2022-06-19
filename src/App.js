@@ -8,6 +8,15 @@ import Typography from '@mui/material/Typography'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Grid from '@mui/material/Grid'
+import Accordion from '@mui/material/Accordion'
+import AccordionSummary from '@mui/material/AccordionSummary'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import Radio from '@mui/material/Radio'
+import RadioGroup from '@mui/material/RadioGroup'
+import FormControlLabel from '@mui/material/FormControlLabel'
+import FormControl from '@mui/material/FormControl'
+import FormLabel from '@mui/material/FormLabel'
 
 function App() {
   return (
@@ -26,7 +35,7 @@ function App() {
         <Typography variant='h1' gutterBottom>
           MUI v5
         </Typography>
-        <Typography variant='subtitle' align='left' gutterBottom>
+        <Typography variant='subtitle1' p={5} align='justify' gutterBottom>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
           eius sint dolorum aspernatur obcaecati consectetur impedit mollitia,
           hic, assumenda esse, ex dolorem provident quibusdam praesentium et
@@ -46,6 +55,34 @@ function App() {
             tenetur reiciendis neque voluptate tempore delectus in ipsam
             nesciunt, facere voluptatibus illum impedit.
           </Typography>
+
+          <Accordion>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography>Learn MUI v5</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+                ex ducimus aspernatur neque ab numquam maiores facilis. Maiores,
+                accusantium! Excepturi perspiciatis sunt quam officiis quia, ab
+                veniam a illo nam?
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography>Learn MUI v3</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+                ex ducimus aspernatur neque ab numquam maiores facilis. Maiores,
+                accusantium! Excepturi perspiciatis sunt quam officiis quia, ab
+                veniam a illo nam?
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
         </Grid>
         <Grid item xs={8}>
           <Typography paragraph={true} align='justify'>
@@ -58,6 +95,28 @@ function App() {
             voluptate tempore delectus in ipsam nesciunt, facere voluptatibus
             illum impedit.
           </Typography>
+          <FormControl>
+            <FormLabel color='success'>
+              Which framework would you like to use?
+            </FormLabel>
+            <RadioGroup row>
+              <FormControlLabel
+                value='nextjs'
+                control={<Radio color='success' />}
+                label='Nextjs'
+              />
+              <FormControlLabel
+                value='nextjs1'
+                control={<Radio color='success' />}
+                label='Nextjs1'
+              />
+              <FormControlLabel
+                value='nextjs2'
+                control={<Radio color='success' />}
+                label='Nextjs2'
+              />
+            </RadioGroup>
+          </FormControl>
         </Grid>
       </Grid>
 
